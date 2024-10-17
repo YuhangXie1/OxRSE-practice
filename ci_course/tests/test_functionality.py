@@ -1,5 +1,5 @@
 import ci_course
-
+import pytest
 
 def test_greet():
     """
@@ -16,3 +16,9 @@ def test_minimum():
     assert ci_course.minimum(1, 2, 3) == 1
     assert ci_course.minimum(1.2, 2.3) == 1.2
     assert ci_course.minimum(-1.2, -3) == -3
+    assert ci_course.minimum(1, "Hello", [1,2,3]) == 1
+
+    with pytest.raises(ValueError):
+        ci_course.minimum("Hello", "Oh no", [1,3,4]) 
+
+    
