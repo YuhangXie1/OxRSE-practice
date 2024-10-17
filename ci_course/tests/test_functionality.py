@@ -18,7 +18,7 @@ def test_minimum():
     assert ci_course.minimum(-1.2, -3) == -3
     assert ci_course.minimum(1, "Hello", [1,2,3]) == 1
 
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         ci_course.minimum("Hello", "Oh no", [1,3,4]) 
 
     
