@@ -5,14 +5,6 @@ build:
    tools:
       python: "3.12"
 
-python:
-   version: "3.12"
-   install:
-      - method: pip
-        path: .
-        extra_requirements:
-            - docs
-
 sphinx:
   builder: html
   configuration: docs/conf.py
