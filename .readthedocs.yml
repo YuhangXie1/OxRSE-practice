@@ -1,5 +1,8 @@
 version: 2
 
+build:
+   os: Ubuntu-24.04
+
 python:
    version: 3.8
    install:
