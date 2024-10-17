@@ -33,6 +33,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Generates coverage report
       run: |
+        pytest --cov-branch
         pytest --cov-config=.coveragerc --cov=./ci_course --cov-report=xml
         cat coverage.xml
     - name: Upload to Codecov
