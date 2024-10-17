@@ -35,6 +35,7 @@ def minimum(*args):
     if not any([isinstance(arg, numbers.Real) for arg in args]):
         raise TypeError("None of the input arguments are numbers")
 
+
     the_min = float("inf")
     for arg in args:
         if isinstance(arg, numbers.Real):
